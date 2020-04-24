@@ -38,7 +38,35 @@ jupyter notebook <filename>.ipynb
 ```
 
 # Overview
-The project is divided into four main sections:
+The project is divided into five main sections:
+
+## "CEP" folder
+
+Contains the analysis of the relation between the IRA (GPA equivalent ) and the CEP (brazilian ZIP code) from the students of Computer Engineering over time.
+
+The notebooks __[CEP_IRA.ipynb](cep/CEP_IRA.ipynb)__ e __[CEP_aluno.ipynb](cep/CEP_aluno.ipynb)__ extracts the features of the files from the __[data](cep/data)__ folder and generates the pictures of the __[heatmap](cep/heatmap)__ folder.
+
+The file __[convert2gif.py](cep/convert2gif.py)__ inserts a "semester/year" title on the top of each image and converts them to an animated gif.
+
+![Heatmap_IRA](cep/heatmap_ira.gif)
+
+
+## "Decision Tree" folder
+
+Contains the classifier used for labeling the incoming students.
+A post prunning algorithm was implemented, recommended against the traditional pre-prunning method, using the Cost Complexity algorithm proposed by BREIMAN et al., 1984
+
+![tree_prunning](decisionTree/images/pruning.gif)
+
+
+## "Probability" folder
+
+Contains the analysis of the dropout probability of the Computer Engineering students. 
+The 3 notebooks contains the graphs relating the conditional probability of dropout and courses failure.
+
+![Prob_1x1_sem1](probability/images/prob_1x1_sem1.png?raw=true)
+![Prob_1x2_sem1](probability/images/prob_1x2_sem1.png?raw=true)
+
 
 ## "BI" folder
 
@@ -67,22 +95,3 @@ The analysis is stored in the ipython notebook __[grades_notebook.ipynb](grades/
 + Dynamical behaviour of any course over time.
 
 ![Time](grades/images/time.png?raw=true)
-
-## "CEP" folder
-
-Contains the analysis of the relation between the IRA (GPA equivalent ) and the CEP (brazilian ZIP code) from the students of Computer Engineering over time.
-
-The notebooks __[CEP_IRA.ipynb](cep/CEP_IRA.ipynb)__ e __[CEP_aluno.ipynb](cep/CEP_aluno.ipynb)__ extracts the features of the files from the __[data](cep/data)__ folder and generates the pictures of the __[heatmap](cep/heatmap)__ folder.
-
-The file __[convert2gif.py](cep/convert2gif.py)__ inserts a "semester/year" title on the top of each image and converts them to an animated gif.
-
-![Heatmap_IRA](cep/heatmap_ira.gif)
-
-
-## "Probability" folder
-
-Contains the analysis of the dropout probability of the Computer Engineering students. 
-The 3 notebooks contains the graphs relating the conditional probability of dropout and courses failure.
-
-![Prob_1x1_sem1](probability/images/prob_1x1_sem1.png?raw=true)
-![Prob_1x2_sem1](probability/images/prob_1x2_sem1.png?raw=true)
